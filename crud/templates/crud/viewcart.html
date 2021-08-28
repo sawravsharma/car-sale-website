@@ -1,0 +1,267 @@
+ {% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0 ;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    
+  .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      min-height:200px;
+  }
+
+  /* Hide the carousel text when the screen is less than 600 pixels wide */
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+  }
+  .divShell{
+  background-color: antiquewhite
+}
+
+H1{
+  text-align: center
+}
+form{
+  border-radius: 25px;
+  background-color: thistle;
+  align-self: center;
+  color: brown
+  margin: 6px;
+  padding-top: 20px;
+  padding-bottom:20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.loanBlock{
+  text-align: center;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.aprBlock{
+  text-align: center;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.tenureBlock{
+  text-align: center;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.buttonBlock{
+  text-align: center;
+  padding-bottom: 5px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right:20px
+}
+
+button{
+  position: relative;
+  left: 42.5%;
+  bottom: 25%;
+  background-color: navy;
+  color: white;
+  padding: 10px;
+  border-radius: 30px
+}
+
+#EMICapt{
+
+  border-radius: 10px;
+  background-color:antiquewhite;
+  color: rgb(236, 17, 17);
+  padding: 20px;
+  text-align: center
+}
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="http://localhost:8181/">Logo</a>
+</div>
+
+<div class="collapse navbar-collapse" id="myNavbar">
+<ul class="nav navbar-nav">
+<li class="active"><a href="http://localhost:8000/">Home</a></li>
+
+</ul>
+<ul class="nav navbar-nav navbar-right">
+
+<li><a href="http://localhost:8000/crud/log"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Logout</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+
+
+
+
+<hr>
+<p>
+<p> <p>
+<p>
+<hr>
+<p>
+<p> <p>
+<p>
+
+
+
+
+
+
+<center>
+<h1><b><u>USER CART</u></b></h1>
+<hr>
+<div class="container">
+<table  class="table table-hover">
+                <thead align="center">
+                  <tr class="info">
+					<th>Image</th>
+					<th>Front View</th>
+					<th>Back View</th>
+					<th>Left View</th>
+					<th>Right View</th>
+                    <th>Name</th>
+                    <th>Price</th>
+					<th>Color</th>
+					<th>Category</th>
+					<th>Engine</th>
+					<th>Displacement</th>
+					<th>Power</th>
+					<th>Drivetrain</th>
+					<th>Fuel tank capacity</th>
+					<th>Airbags</th>
+					
+					<th>Action</th>
+                  </tr>
+                </thead>
+                
+                <tbody>
+              
+                  
+				     {% load static %}
+				  {% for p in products %}
+				  <tr class="warning">
+					 <td> <img src="{%static 'crud/uploads/'%}{{ p.image }}" width=100 height=100 />
+					 <td> <img src="{%static 'crud/uploads/'%}{{ p.img}}" width=100 height=100 />
+					 <td> <img src="{%static 'crud/uploads/'%}{{ p.picture }}" width=100 height=100 />
+					 <td> <img src="{%static 'crud/uploads/'%}{{ p.pic }}" width=100 height=100 />
+					 <td> <img src="{%static 'crud/uploads/'%}{{ p.pica }}" width=100 height=100 />
+                    <td>{{ p.name }}</td>
+                    <td>${{ p.price }}</td>
+					<td>{{ p.color }}</td>
+					<td>{{ p.category }}</td>
+					<td>{{ p.engine }}</td>
+					<td>{{ p.displacement }}</td>
+					<td>{{ p.power }}</td>
+					<td>{{ p.drivetrain }}</td>
+					<td>{{ p.fuel_tank_capacity }}</td>
+					<td>{{ p.airbags }}</td>
+					
+					<td align="center">
+                      <a href="pcartdelete/{{ p.id }}">
+                        <input type="button" class="btn btn-sm btn-danger" title="Delete" value="Delete"></button>
+                      </a>
+                   
+                    </td>
+                  </tr>
+				</div>
+
+                      {% endfor %}
+
+                  <tr>
+				  <td colspan=9 ><h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GROSS AMOUNT  = {{ gross }}</h2> </td>
+                </tbody>
+              </table>
+			    <div class="outerShell">
+    <H3>EMI Calculator for Car loans</H3>
+    <form name="loan-form" onsubmit="return calculator()">
+    <div class='loanBlock'>
+     Loan Amount<br>
+     <input type=number id="amount" style="border-radius:5px"><br>
+    </div>
+     <div class='aprBlock'>
+     Annual Percent Rate<br>
+     <input type="number" name="apr" id="apr" style="border-radius:5px"><br>
+     </div>
+      <div class='tenureBlock'>
+     Tenure<br>
+     <input type=number name="tenure" id="tenure" style="border-radius:5px"><br>
+     <br>
+      </div>
+      <div id=buttonBlock>
+    <button style="border-radius:2px">Find Out</button>
+      </div>
+    </form>
+    <P id="EMICapt"></P>
+    <script src='script.js'> </script>
+  </div>
+  <script>
+    function calculator() {
+        const loanstruct = {
+        loanAmount:document.getElementById("amount").value,
+        annualInterestrate:document.getElementById("apr").value,
+        loanDuration:document.getElementById("tenure").value
+        };
+      // Passing the object as the arguement. The function also returns an object that includes both EMI & Total
+      console.log(loanstruct)
+      function EMIVal2(loan){
+          interest = loan.annualInterestrate/1200;
+          let term = loan.loanDuration*12;
+          let top = Math.pow((1+interest),term);
+          let bottom = top - 1;
+          let ratio = top/bottom;
+          EMI = loan.loanAmount * interest * ratio;
+          Total = EMI*term;
+          const EMIObj = {
+            EMI:EMI.toFixed(0),
+            Total:Total.toFixed(0)
+            };
+          return EMIObj
+      }
+      console.log(EMIVal2(loanstruct));
+      document.getElementById("EMICapt").innerHTML='<P><b>EMI: Rs. </b>' + EMIVal2(loanstruct).EMI + '<br>' + '<b> Total: Rs. </b>' + EMIVal2(loanstruct).Total +'</P>';
+
+      return false
+    }
+	</script>
+			 <center>
+			 <div class="jumbotron text-center">
+			 <a href="/crud/paybill"><b>Pay Bill</b></a>
+			 </div>
+			  
+{% endblock %}

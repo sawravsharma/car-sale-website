@@ -1,0 +1,326 @@
+
+ {% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	
+      <!--//booststrap end-->
+	  
+      <!-- font-awesome icons -->
+	  <link rel="stylesheet" href="css/fontawesome-all.css">
+      <!-- //font-awesome icons -->
+     <!--stylesheets-->
+	 <link href="css/style.css" rel='stylesheet' type='text/css' media="all">
+  <style>
+  .map iframe {
+	width:100%;
+	height:600px;
+	padding:1em;
+	border: 5px solid #000;
+}
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.navbar-default .navbar-brand{
+	collor:#d7e2e9;
+}
+.navbar-fixed-top {
+    min-height: 80px;
+	}
+
+.navbar-nav > li > a {
+    padding-top: 5px;
+    padding-bottom: 0px;
+    line-height: 80px;
+}
+
+@media (max-width: 767px) {
+    .navbar-nav > li > a {
+    line-height: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;}
+}
+    
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: black;
+      padding: 100px;
+    }
+    
+  .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      height:70%;
+  }
+
+  #myCarousel {
+  height: 800px;
+  width: auto;
+  overflow: hidden;
+}
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+	.glyphicon {
+    font-size: 30px;
+}
+	.glyphicon.glyphicon-log-in {
+    font-size: 30px;
+}
+    .icon {
+      background-color: var(--bs-light);
+      border-radius: .25rem;
+    }
+    .bi {
+      margin: .25rem;
+      font-size: 2.5rem;
+    }
+    .label {
+      font-family: var(--bs-font-monospace);
+    }
+    .label {
+      display: inline-block;
+      width: 100%;
+      overflow: hidden;
+      padding: .25rem;
+      font-size: .625rem;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+	}
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+	  {%load static %}
+      <a class="navbar-brand" href="http://localhost:8000/crud/"><img src="{%static 'crud/img/car4.JPG'%}" alt="Avatar" class="avatar"></a>
+</div>
+
+<div class="collapse navbar-collapse" id="myNavbar">
+<ul class="nav navbar-nav">
+<li class="active"><a href="http://localhost:8000/crud/"><strong>H O M E</strong></a></li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+
+<li><a href="http://localhost:8000/crud/viewcart"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;Cart</a></li>
+<li><a href="http://localhost:8000/crud/log"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Login</a></li>
+<li><a href="http://localhost:8000/crud/sign"><span class="glyphicon glyphicon-user"></span>&nbsp;Sign UP</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+	   {% load static %}
+	  <img src="{%static 'crud/img/nav1.jpeg'%}" alt="Saurav">   
+      </div>
+		<div class="item">
+        <img src="{%static 'crud/img/creta.jpg'%}" alt="Saurav">     
+      </div>
+	  <div class="item">
+        <img src="{%static 'crud/img/nav3.jpg'%}" alt="Saurav">     
+      </div>
+	  <div class="item">
+        <img src="{%static 'crud/img/suv8.jpg'%}" alt="Saurav">    
+      </div>
+
+      <div class="item">
+        <img src="{%static 'crud/img/jeep7.jpg'%}" alt="Saurav">     
+      </div>
+	  
+	   <div class="item">
+        <img src="{%static 'crud/img/verna.jpg'%}" alt="Saurav">    
+      </div>
+	  
+	   <div class="item">
+        <img src="{%static 'crud/img/jeep8.jpg'%}" alt="Saurav">
+        
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
+     <center>
+  <h3><b>What We Have</b></h3><br>
+  		{% load static %}
+	<div class="container">
+        <a href="/crud/show_cars" ><img src="{%static 'crud/img/jeep3.jpg' %}" alt="Image" style="width:100%">
+        <button class="btn">OUR CAR'S</button>
+		</a>
+    </div>
+
+<hr>
+
+<div class="map">
+	<iframe src="https://maps.google.com/maps?q=30.7233,76.7661&h1=es;z=14&amp;output=embed">
+	</iframe>
+</div>
+<div class="Jumbotron">
+<h1> <center><b><u><i>SELECT THE VEHICLES</i></u></b></h1>
+<table  class="table table-hover">
+                <thead align="center">
+                  <tr class="info">
+					<th>Vehicle's Images</th>
+                    <th>Vehicle's Name</th>
+                    <th>Price</th>
+					<th>Color</th>
+					<th>Category</th>
+					<th>Engine</th>
+					<th>Displacement</th>
+					<th>Power</th>
+					<th>Drivetrain</th>
+					<th>Fuel tank capacity</th>
+					<th>Airbags</th>
+					<th>Action</th>
+                  </tr>
+                </thead>
+                
+                <tbody>
+              
+                  
+				     {% load static %}
+				  {% for p in products %}
+				  <tr class="warning">
+					 <td> <img src="{%static 'crud/uploads/'%}{{ p.image }}" width=100 height=100 />
+                    <td>{{ p.name }}</td>
+                    <td>${{ p.price }}</td>
+					<td>{{ p.color }}</td>
+					<td>{{ p.category }}</td>
+					<td>{{ p.engine }}</td>
+					<td>{{ p.displacement }}</td>
+					<td>{{ p.power }}</td>
+					<td>{{ p.drivetrain }}</td>
+					<td>{{ p.fuel_tank_capacity }}</td>
+					<td>{{ p.airbags }}</td>
+					
+					<td align="center">
+                      <a href="/crud/pcart/{{ p.id }}">
+                        <input type="button" class="btn btn-sm btn-primary" title="Add to cart" value="Add To Cart"></button>
+                      </a>
+                   
+                    </td>
+                  </tr>
+                      {% endfor %}
+                  
+                </tbody>
+              </table>
+			 
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+form {
+  border: 0px solid #f1f1f1;
+  font-family: Arial;
+}
+
+.container {
+  padding: 20px;
+  background-color: #f1f1f1;
+}
+
+input[type=text], input[type=submit] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type=checkbox] {
+  margin-top: 16px;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+}
+
+input[type=submit]:hover {
+  opacity: 0.8;
+}
+</style>
+			 <center>	  
+<footer>
+<div class="container">
+  <a href="/crud/viewcart"><b><font style =color:blue><h3>Proceed to MyCart</h3></b></a>
+</div>
+<br>
+  <form action="/action_page.php">
+  <div class="container" style="background-color:white">
+    <h2><font style =color:Blue>Subscribe to our Newsletter</h2>
+    <input type="text" placeholder="Name" name="name" required>
+    <input type="text" placeholder="Email address" name="mail" required>
+    <label>
+      <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+    </label>
+    <input type="submit" value="Subscribe">
+  </div>
+</form>
+
+</footer>
+{% endblock %}
+
+
+
+			  
+			  

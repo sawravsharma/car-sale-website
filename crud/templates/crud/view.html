@@ -1,0 +1,150 @@
+ {% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0 ;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    
+  .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      min-height:200px;
+  }
+
+  /* Hide the carousel text when the screen is less than 600 pixels wide */
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+  }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="http://localhost:8181/">Logo</a>
+</div>
+
+<div class="collapse navbar-collapse" id="myNavbar">
+<ul class="nav navbar-nav">
+<li class="active"><a href="http://localhost:8000/">Home</a></li>
+
+</ul>
+<ul class="nav navbar-nav navbar-right">
+
+<li><a href="http://localhost:8000/crud/log"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Logout</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+
+
+
+
+<hr>
+<p>
+<p> <p>
+<p>
+<hr>
+<p>
+<p> <p>
+<p>
+
+
+<h1>Welcome Admin</h1>
+
+
+
+
+
+
+<a href="pro">Add Vehicles</a>
+<br>
+<p>
+<a href="pview">View Vehicles</a>
+<center>
+
+<table  class="table table-hover">
+                <thead align="center">
+                  <tr class="info">
+					<th>Image</th>
+					<th>Front View</th>
+					<th>Back View</th>
+					<th>Left View</th>
+					<th>Right View</th>
+                    <th>Name</th>
+                    <th>Price</th>
+					<th>Color</th>
+					<th>Category</th>
+					<th>Engine</th>
+					<th>Displacement</th>
+					<th>Power</th>
+					<th>Drivetrain</th>
+					<th>Fuel tank capacity</th>
+					<th>Airbags</th>
+					<th>Description</th>
+					<th>Action</th>
+                  </tr>
+                </thead>
+                
+                <tbody>
+                			
+                  
+				     {% load static %}
+				  {% for p in products %}
+				  <tr class="warning">
+					 <td> <img src="{%static 'crud/uploads/'%}{{ p.image }}" width=100 height=100 />
+					 <td> <img src="{%static 'crud/uploads/'%}{{ p.img }}" width=100 height=100 />
+					 <td> <img src="{%static 'crud/uploads/'%}{{ p.picture }}" width=100 height=100 />
+					 <td> <img src="{%static 'crud/uploads/'%}{{ p.pic }}" width=100 height=100 />
+					 <td> <img src="{%static 'crud/uploads/'%}{{ p.pica }}" width=100 height=100 />
+                    <td>{{ p.name }}</td>
+                    <td>${{ p.price }}</td>
+					<td>{{ p.color }}</td>
+					<td>{{ p.category }}</td>
+					<td>{{ p.engine }}</td>
+					<td>{{ p.displacement }}</td>
+					<td>{{ p.power }}</td>
+					<td>{{ p.drivetrain }}</td>
+					<td>{{ p.fuel_tank_capacity }}</td>
+					<td>{{ p.airbags }}</td>
+					<td>{{ p.description }}</td>
+					
+					<td align="center">
+                      <a href="pdelete/{{ p.id }}">
+                        <input type="button" class="btn btn-sm btn-danger" title="Delete" value="Delete"></button>
+                      </a>
+                   
+                    </td>
+                  </tr>
+                      {% endfor %}
+                  
+                </tbody>
+              </table>
+			  
+			  
+{% endblock %}

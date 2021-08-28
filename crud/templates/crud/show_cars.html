@@ -1,0 +1,287 @@
+ {% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	
+      <!--//booststrap end-->
+	  
+      <!-- font-awesome icons -->
+	  <link rel="stylesheet" href="css/fontawesome-all.css">
+      <!-- //font-awesome icons -->
+     <!--stylesheets-->
+	 <link href="css/style.css" rel='stylesheet' type='text/css' media="all">
+  <style>
+  .map iframe {
+	width:100%;
+	height:600px;
+	padding:1em;
+	border: 5px solid #000;
+}
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.navbar-default .navbar-brand{
+	collor:#d7e2e9;
+}
+.navbar-fixed-top {
+    min-height: 80px;
+	}
+
+.navbar-nav > li > a {
+    padding-top: 5px;
+    padding-bottom: 0px;
+    line-height: 80px;
+}
+
+@media (max-width: 767px) {
+    .navbar-nav > li > a {
+    line-height: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;}
+}
+    
+  #myCarousel {
+  height: 800px;
+  width: auto;
+  overflow: hidden;
+}
+.container {
+  position: relative;
+  width: 150%;
+  max-width: 800px;
+}
+
+.container img {
+  width: 150%;
+  height: auto;
+}
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+	  {%load static %}
+      <a class="navbar-brand" href="http://localhost:8000/crud/"><img src="{%static 'crud/img/car4.JPG'%}" alt="Avatar" class="avatar"></a>
+</div>
+
+<div class="collapse navbar-collapse" id="myNavbar">
+<ul class="nav navbar-nav">
+<li class="active"><a href="http://localhost:8000/crud/"><strong>H O M E</strong></a></li>
+</ul>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+
+<li><a href="http://localhost:8000/crud/log"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Logout</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<hr>
+<p>
+<p> <p>
+<p>
+<hr>
+<p>
+<p> <p>
+<p>
+ <center>
+<h3><b><i>HYUNDAI Verna</i></b></h3><br>
+{% load static %}
+  <div class="container">
+  	<div class="col-sm-12">
+   <img src="{%static 'crud/img/verna.jpg' %}" class="img-responsive" style="width:100%" alt="Image">
+      <p><b>Hyundai Verna</b></p>
+    </div>
+    <div class="col-sm-3"> 
+   <img src="{%static 'crud/img/vernafront.jpg' %}" class="img-responsive" style="width:100%" alt="Image">
+      <p><b>Front view</b></p>    
+    </div>
+    <div class="col-sm-3">
+	<img src="{%static 'crud/img/vernaback.jpg' %}" class="img-responsive" style="width:100%" alt="Image">
+	 <p><b>Back view</b></p>
+	 </div>
+	<div class="col-sm-3">
+	<img src="{%static 'crud/img/vernaleft.jpg' %}" class="img-responsive" style="width:100%" alt="Image">
+	<p><b>Left view</b></p>
+	</div>
+	<div class="col-sm-3">
+	<img src="{%static 'crud/img/vernaright.jpg' %}" class="img-responsive" style="width:100%" alt="Image">
+	<p><b>Right view</b></p>
+	</div>
+</div>
+	<b><b>
+<div class="col-sm-12">	
+<p><b>The Hyundai Verna 2 Petrol Engine on offer. The Petrol engine is 1497 cc . It is available with the Manual & Automatic transmission. Depending upon the variant and fuel type the Verna has a mileage of 17.7 to 25.0 kmpl. The Verna is a 5 seater and has length of 4440mm, width of 1729mm and a wheelbase of 2600mm.Although just a facelift, the <a>2020 Verna</a> now packs in some extensive changes in the aesthetic department as well as with the added modern tech and, of course, the all-new engine and transmission options. But it's not like you could find much fault with the older Verna. So, how big of a difference do these changes make? And can they make the sedan even more appealing? We got our hands on the new 1.5-litre petrol with the CVT transmission in its top-end SX (O) trim for a day to figure out just that</b></p>
+</div>
+
+ <center>
+<h3><b><i>HYUNDAI Creta</i></b></h3><br>
+{% load static %}
+  <div class="container">
+  	<div class="col-sm-12">
+   <img src="{%static 'crud/img/creta.jpg' %}" class="img-responsive" style="width:100%" alt="Image">
+      <p><b>Hyundai Creta</b></p>
+    </div>
+    <div class="col-sm-3"> 
+   <img src="{%static 'crud/img/cretafront.jpg' %}" class="img-responsive" style="width:100%" alt="Image">
+      <p><b>Front view</b></p>    
+    </div>
+    <div class="col-sm-3">
+	<img src="{%static 'crud/img/cretaback.jpg' %}" class="img-responsive" style="width:100%" alt="Image">
+	 <p><b>Back view</b></p>
+	 </div>
+	<div class="col-sm-3">
+	<img src="{%static 'crud/img/cretaleft.jpg' %}" class="img-responsive" style="width:100%" alt="Image">
+	<p><b>Left view</b></p>
+	</div>
+	<div class="col-sm-3">
+	<img src="{%static 'crud/img/cretaright.jpg' %}" class="img-responsive" style="width:100%" alt="Image">
+	<p><b>Right view</b></p>
+	</div>
+</div>
+	<b><b>
+<div class="col-sm-12">	
+<p><b>The Hyundai Creta is the most important car to Hyundai. It has been a runaway success and for a car that costs well in excess of Rs 10 lakh, to sell almost 10,000 units every month over the last six years is just incredible. With ever growing competition, Hyundai has finally come out with a brand new Creta that promises to be more premium and a new class benchmark. Prices have gone up too but so has the feature list.In terms of size, the new Creta is longer and wider than the old SUV but it is 30mm shorter than before. Like the recently launched Hyundai Aura, the new Creta’s design will receive mixed reactions from the crowd. In pursuit of trying to make the Creta as attractive as possible, Hyundai’s designers have gone a bit overboard, especially with the nose and tail. Up front, you get a massive hexagonal grille that is outlined by a chrome strip that looks a tad too shiny. Then you have the ice cube three element LED headlamps that look stylish with the LED DRLs sitting on top of them. The turn indicators are placed lower down in the fog lamp</b></p>
+</div>
+
+<h3><b><i>MARUTI SUZUKI Baleno</i></b></h3><br>
+{% load static %}
+  <div class="container">
+  	<div class="col-sm-12">
+   <img src="{%static 'crud/img/baleno.jpg' %}" class="img-responsive" style="width:100%" alt="Image">
+      <p><b>Baleno</b></p>
+    </div>
+    <div class="col-sm-3"> 
+   <img src="{%static 'crud/img/balenofront.jpg' %}" class="img-responsive" style="width:100%" alt="Image">
+      <p><b>Front view</b></p>    
+    </div>
+    <div class="col-sm-3">
+	<img src="{%static 'crud/img/balenoback.jpg' %}" class="img-responsive" style="width:100%" alt="Image">
+	 <p><b>Back view</b></p>
+	 </div>
+	<div class="col-sm-3">
+	<img src="{%static 'crud/img/balenoleft.jpg' %}" class="img-responsive" style="width:100%" alt="Image">
+	<p><b>Left view</b></p>
+	</div>
+	<div class="col-sm-3">
+	<img src="{%static 'crud/img/balenoright.jpg' %}" class="img-responsive" style="width:100%" alt="Image">
+	<p><b>Right view</b></p>
+	</div>
+</div>
+	<b><b>
+<div class="col-sm-12">	
+<p><b>The Baleno is the most important car to Maruti Suzuki. It has been a runaway success and for a car that costs well in excess of Rs 10 lakh, to sell almost 10,000 units every month over the last six years is just incredible. With ever growing competition, M.S has finally come out with a brand new Creta that promises to be more premium and a new class benchmark. Prices have gone up too but so has the feature list.In terms of size, the new Baleno is longer and wider but it is 30mm shorter than before. Like the recently launched Maruti swift, the new Baleno’s design will receive mixed reactions from the crowd. In pursuit of trying to make the baleno as attractive as possible, Nexus’s designers have gone a bit overboard, especially with the nose and tail. Up front, you get a massive hexagonal grille that is outlined by a chrome strip that looks a tad too shiny. Then you have the ice cube three element LED headlamps that look stylish with the LED DRLs sitting on top of them. The turn indicators are placed lower down in the fog lamp</b></p>
+</div>
+
+<br>
+<br>
+<br>
+
+<h3><b><i>HYUNDAI i20</i></b></h3><br>
+{% load static %}
+  <div class="container">
+  	<div class="col-sm-12">
+   <img src="{%static 'crud/img/i20.jpg' %}" class="img-responsive" style="width:100%" alt="Image">
+      <p><b>Hyundai Creta</b></p>
+    </div>
+    <div class="col-sm-3"> 
+   <img src="{%static 'crud/img/i20front.jpg' %}" class="img-responsive" style="width:100%" alt="Image">
+      <p><b>Front view</b></p>    
+    </div>
+    <div class="col-sm-3">
+	<img src="{%static 'crud/img/i20back.jpg' %}" class="img-responsive" style="width:100%" alt="Image">
+	 <p><b>Back view</b></p>
+	 </div>
+	<div class="col-sm-3">
+	<img src="{%static 'crud/img/i20left.jpg' %}" class="img-responsive" style="width:100%" alt="Image">
+	<p><b>Left view</b></p>
+	</div>
+	<div class="col-sm-3">
+	<img src="{%static 'crud/img/i20right.jpg' %}" class="img-responsive" style="width:100%" alt="Image">
+	<p><b>Right view</b></p>
+	</div>
+</div>
+	<b><b>
+<div class="col-sm-12">	
+<p><b>The Hyundai i20 is the most important car to Hyundai. It has been a runaway success and for a car that costs well in excess of Rs 8 lakh, to sell almost 10,000 units every month over the last six years is just incredible. With ever growing competition, Hyundai has finally come out with a brand new i20 that promises to be more premium and a new class benchmark. Prices have gone up too but so has the feature list.In terms of size, the new i20 is longer and wider than the old i20 but it is 30mm shorter than before. Like the recently launched Hyundai Aura, the new i20’s design will receive mixed reactions from the crowd. In pursuit of trying to make the i20 as attractive as possible, Hyundai’s designers have gone a bit overboard, especially with the nose and tail. Up front, you get a massive hexagonal grille that is outlined by a chrome strip that looks a tad too shiny. Then you have the ice cube three element LED headlamps that look stylish with the LED DRLs sitting on top of them. The turn indicators are placed lower down in the fog lamp</b></p>
+</div>
+<h1><b><u><i>VEHICLE SPECIFICATIONS</i></u></b></h1>
+<table  class="table table-hover">
+                <thead align="center">
+                  <tr class="info">
+					<th>Vehicle's Images</th>
+					<th>Vehicle's Front View</th>
+					<th>Vehicle's Back View</th>
+					<th>Vehicle's Left View</th>
+					<th>Vehicle's Right View</th>
+                    <th >Vehicle's Name</th>
+                    <th>Price</th>
+					<th>Color</th>
+					<th>Category</th>
+					<th>Engine</th>
+					<th>Displacement</th>
+					<th>Power</th>
+					<th>Drivetrain</th>
+					<th>Fuel tank capacity</th>
+					<th>Airbags</th>
+					<th>Description</th>
+                  </tr>
+                </thead>
+                
+                <tbody>
+              
+                  <div class="container">
+				  {% load static %}
+				  {% for p in products %}
+				  <tr class="warning">
+					 <td> <img src="{%static 'crud/uploads/'%}{{ p.image }}" width=100 height=100 />
+					 <td> <img src="{%static 'crud/uploads/'%}{{ p.img }}" width=100 height=100 />
+					 <td> <img src="{%static 'crud/uploads/'%}{{ p.picture }}" width=100 height=100 />
+					 <td> <img src="{%static 'crud/uploads/'%}{{ p.pic }}" width=100 height=100 />
+					 <td> <img src="{%static 'crud/uploads/'%}{{ p.pica }}" width=100 height=100 />
+                    <td><a href="/crud/scart/{{ p.id }}">{{ p.name }} </a></td>
+                    <td>${{ p.price }}</td>
+					<td>{{ p.color }}</td>
+					<td>{{ p.category }}</td>
+					<td>{{ p.engine }}</td>
+					<td>{{ p.displacement }}</td>
+					<td>{{ p.power }}</td>
+					<td>{{ p.drivetrain }}</td>
+					<td>{{ p.fuel_tank_capacity }}</td>
+					<td>{{ p.airbags }}</td>
+					<td>{{ p.description }}</td>
+					
+</div>
+                  </tr>
+                      {% endfor %}
+                  
+                </tbody>
+              </table>
+
+<td align="center">
+    <a href="http://localhost:8000/">
+        <input type="button" class="btn btn-sm btn-primary" title="To buy Car's" value="To buy Car's"></button>
+   
+    </td>             
+			  
+{% endblock %}			  

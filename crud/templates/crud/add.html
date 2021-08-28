@@ -1,0 +1,233 @@
+
+ {% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0 ;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+    
+  .carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+      min-height:200px;
+  }
+
+  /* Hide the carousel text when the screen is less than 600 pixels wide */
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+  }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="http://localhost:8000/">Logo</a>
+</div>
+
+<div class="collapse navbar-collapse" id="myNavbar">
+<ul class="nav navbar-nav">
+<li class="active"><a href="http://localhost:8000/">Home</a></li>
+
+</ul>
+<ul class="nav navbar-nav navbar-right">
+
+<li><a href="http://localhost:8000/crud/log/"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Logout</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+
+
+
+
+<hr>
+<p>
+<p> <p>
+<p>
+<hr>
+<p>
+<p> <p>
+<p>
+
+
+<h1>Welcome Admin</h1>
+
+
+
+<a href="pro">Add Vehicles</a>
+<br>
+<p>
+<a href="pview">View Vehicles</a>
+
+
+
+
+<div class="panel panel-info">
+
+<div class="panel-body">
+<form action="pcreate" method="post" >
+ {% csrf_token %}
+<div class="container">
+<div class="row">
+<div class="form-group">
+<label for="name">Vehicle Name</label>
+<input type=text name=name class=form-control placeholder="name of Vehicle">
+</div>
+</div>
+<div class=row>
+<div class=form-group>
+<label for=price>Price</label>
+<input type=text name=price class=form-control>
+</div>
+</div>
+
+
+<div class=row>
+<div class=form-group>
+<label for=color>Color</label>
+<input type=text name=color class=form-control>
+</div>
+</div>
+
+
+<div class=row>
+<div class=form-group>
+<label for="category">Category of Vehicles</label>
+</div>
+</div>
+<div class=row>
+<div class=form-group>
+<select name="category" class=form-control>
+<option>Sedan</option>
+<option>SUV</option>
+<option>Sports car</option>
+<option>Jeep</option>
+<option>Hatchback</option>
+</select>
+</div>
+</div>
+
+
+<div class=row>
+<div class=form-group>
+<label for=color>Engine</label>
+<input type=text name=engine class=form-control>
+</div>
+</div>
+
+
+<div class=row>
+<div class=form-group>
+<label for=color>Displacement</label>
+<input type=text name=displacement class=form-control>
+</div>
+</div>
+
+
+<div class=row>
+<div class=form-group>
+<label for=color>Power</label>
+<input type=text name=power class=form-control>
+</div>
+</div>
+
+
+<div class=row>
+<div class=form-group>
+<label for=color>Drivetrain</label>
+<input type=text name=drivetrain class=form-control>
+</div>
+</div>
+
+
+<div class=row>
+<div class=form-group>
+<label for=color>Fuel Tank Capacity</label>
+<input type=text name=fuel_tank_capacity class=form-control>
+</div>
+</div>
+
+
+<div class=row>
+<div class=form-group>
+<label for=color>Airbags</label>
+<input type=text name=airbags class=form-control>
+</div>
+</div>
+
+<div class=row>
+<div class=form-group>
+<label for=image>Choose Image</label>
+<input type=text name=image>
+</div >
+</div> 
+<div class=row>
+<div class=form-group>
+<label for=img>Choose Front View</label>
+<input type=text name=img>
+</div >
+</div> 
+<div class=row>
+<div class=form-group>
+<label for=picture>Choose Back View</label>
+<input type=text name=picture>
+</div >
+</div> 
+<div class=row>
+<div class=form-group>
+<label for=pic>Choose Left View</label>
+<input type=text name=pic>
+</div >
+</div> 
+<div class=row>
+<div class=form-group>
+<label for=pica>Choose Right View</label>
+<input type=text name=pica>
+</div >
+</div> 
+
+<div class=row>
+<div class=form-group>
+<label for=description>Description</label>
+<input type=text name=description class=form-control>
+</div>
+</div>
+
+<div class=row>
+<div class=form-group>
+<input  type=submit name="Add Product"  class="btn btn-success"> </a>
+&nbsp;<input  type=reset  value="Reset" class="btn btn-info"> &nbsp;<a href="/"><input type="button" value="Cancel" class="btn btn-info"></button></a>
+</div>
+</div>
+</div>
+</form>
+</div>
+</div>
+
+{% endblock %}
